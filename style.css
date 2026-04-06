@@ -1,54 +1,75 @@
-/* NINETEEN | High-Definition Visual System */
+/* NINETEEN | iPhone 16 Retina Pro System */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap');
 
 :root {
-    --primary-black: #121212; /* 更深的黑，增加對比度 */
+    --primary-black: #121212;
     --vogue-white: #ffffff;
-    --accent-gray: #757575;
+    /* 針對行動端微調線條感 */
+    --line-thickness: 1.5px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--vogue-white);
     color: var(--primary-black);
-    -webkit-font-smoothing: antialiased; /* 強制抗鋸齒 */
-    -moz-osx-font-smoothing: grayscale;
+    /* 解決 iOS 滾動回彈與字體渲染問題 */
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    /* 關鍵：確保在 iPhone 全螢幕下不會被動態島或導覽條吃掉內容 */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-/* 標題重構：使用 Playfair Display 並強化橫向視覺 */
+/* 容器高度使用 dvh，防止 iOS Safari 工具列跳動 */
+.full-screen-container {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 標題優化：針對長型螢幕調整字級與線條 */
 .vogue-title {
     font-family: 'Playfair Display', serif;
-    font-weight: 800; /* 使用極粗體確保線條渾厚 */
-    letter-spacing: -0.02em;
-    line-height: 1;
-    /* 數位補強：輕微的陰影能讓細線在白底上更立體 */
-    text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.05);
+    font-weight: 850; /* 再次加強權重 */
+    font-size: 20vw; /* 手機端視覺重心 */
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    /* 針對 Retina 螢幕的極細陰影，增加立體感 */
+    text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.1);
 }
 
-.letter-spacing-widest {
-    letter-spacing: 0.4em; /* 增加間距，提升高級感 */
-}
-
-/* 強化橫向裝飾線：增加到 2px 寬度，確保清晰 */
+/* 強化的橫向裝飾線 */
 .separator-line {
-    height: 2px; 
+    height: var(--line-thickness);
     background-color: var(--primary-black);
-    width: 60px;
-    margin: 1.5rem 0;
-    display: block;
+    width: 40px;
+    margin: 1.2rem 0;
 }
 
-/* 垂直線也同步加粗 */
-.vertical-scroll-line {
-    height: 100px;
-    width: 2px;
+.vertical-line {
+    width: var(--line-thickness);
+    height: 60px;
     background-color: var(--primary-black);
+}
+
+/* 動畫與排版細節 */
+.letter-spacing-widest {
+    letter-spacing: 0.25em;
 }
 
 .nav-link {
-    font-size: 0.7rem;
-    font-weight: 600; /* 加粗導覽字體 */
-    letter-spacing: 0.2em;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primary-black);
 }
