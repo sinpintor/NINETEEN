@@ -2,53 +2,58 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NINETEEN | The Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NINETEEN | Mobile</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="overflow-x-hidden">
+<body>
 
-    <section class="relative h-screen w-full flex flex-col justify-between p-10 md:p-20">
+    <section class="full-screen-container p-6 md:p-20">
         
-        <header class="flex justify-between items-start z-10 w-full">
-            <div class="text-[10px] font-bold uppercase letter-spacing-widest border-l-2 border-black pl-4">
-                EST. 2026 / VOL. 01
+        <header class="flex justify-between items-start z-10 pt-4">
+            <div class="flex flex-col">
+                <span class="text-[9px] font-bold uppercase letter-spacing-widest">Est. 2026</span>
+                <span class="text-[9px] font-bold uppercase letter-spacing-widest opacity-40">Xiangyun Archive</span>
             </div>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-16">
-                    <li><a href="#" class="nav-link">Archive</a></li>
-                    <li><a href="#" class="nav-link">The Oracle</a></li>
-                    <li><a href="#" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="text-[9px] font-bold uppercase border-b-2 border-black pb-1">
+                Volume 01
+            </div>
         </header>
 
-        <main class="flex-grow flex flex-col justify-center items-center text-center fade-in z-10">
-            <span class="separator-line"></span>
-            <h1 class="vogue-title text-[16vw] md:text-[13vw]">
-                NINETEEN
+        <main class="flex flex-col justify-center items-center text-center">
+            <div class="separator-line"></div>
+            <h1 class="vogue-title">
+                NINE<br>TEEN
             </h1>
-            <div class="mt-6">
-                <p class="text-[10px] md:text-xs uppercase letter-spacing-widest font-bold opacity-100">
-                    Logic-Driven Aesthetic & Narrative Archive
+            <div class="mt-6 flex flex-col items-center">
+                <p class="text-[10px] font-bold uppercase letter-spacing-widest">
+                    Logic-Driven Aesthetic
+                </p>
+                <p class="text-[8px] font-medium uppercase letter-spacing-widest opacity-50 mt-1">
+                    Wade & Code / Narrative
                 </p>
             </div>
-            <span class="separator-line"></span>
+            <div class="separator-line"></div>
         </main>
 
-        <footer class="flex justify-between items-end z-10 w-full">
-            <div class="max-w-xs text-[10px] leading-loose font-medium uppercase letter-spacing-widest">
-                Curated by Xiangyun<br>
-                For Wade & The Digital Soul
+        <footer class="flex justify-between items-end pb-8">
+            <div class="space-y-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="#" class="nav-link">The Archive</a>
+                    <a href="#" class="nav-link">The Oracle</a>
+                </nav>
+                <p class="text-[8px] leading-relaxed opacity-40 uppercase tracking-tighter">
+                    © 2026 NINETEEN ALL RIGHTS RESERVED.
+                </p>
             </div>
+            
             <div class="flex flex-col items-center">
-                <span class="text-[9px] font-bold uppercase letter-spacing-widest mb-4">Discover</span>
-                <div class="vertical-scroll-line"></div>
+                <span class="text-[8px] font-bold uppercase letter-spacing-widest mb-3 rotate-180" style="writing-mode: vertical-rl;">Explore</span>
+                <div class="vertical-line"></div>
             </div>
         </footer>
 
-        <div class="absolute inset-0 z-0 bg-[#f9f9f9]"></div>
     </section>
 
 </body>
