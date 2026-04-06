@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINETEEN | Aesthetic & Logic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        .vogue-title {
+            font-family: 'Bodoni Moda', serif;
+            letter-spacing: -0.02em;
+        }
+        .letter-spacing-widest {
+            letter-spacing: 0.3em;
+        }
+        /* 增加平滑滾動與過渡 */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <section class="relative h-screen w-full flex flex-col justify-between p-8 md:p-12">
+        
+        <header class="flex justify-between items-start z-10">
+            <div class="text-xs font-semibold uppercase letter-spacing-widest">
+                Established 2026
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-12 text-xs uppercase letter-spacing-widest font-light">
+                    <li><a href="#" class="hover:line-through transition">Archive</a></li>
+                    <li><a href="#" class="hover:line-through transition">The Oracle</a></li>
+                    <li><a href="#" class="hover:line-through transition">Flow</a></li>
+                    <li><a href="#" class="hover:line-through transition">W & C</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden text-xs uppercase font-bold">Menu</div>
+        </header>
+
+        <main class="flex-grow flex flex-col justify-center items-center fade-in">
+            <h1 class="vogue-title text-[15vw] md:text-[12vw] leading-none mb-4 select-none">
+                NINETEEN
+            </h1>
+            <p class="text-xs md:text-sm uppercase letter-spacing-widest font-light opacity-60">
+                Logic-Driven Aesthetic & Narrative Archive
+            </p>
+        </main>
+
+        <footer class="flex justify-between items-end z-10">
+            <div class="max-w-xs text-[10px] md:text-xs leading-relaxed opacity-50 uppercase letter-spacing-widest">
+                Documenting life with Wade & Code.<br>
+                Driven by Fate (Lenormand) & Automation.
+            </div>
+            <div class="flex flex-col items-end">
+                <span class="text-[10px] uppercase letter-spacing-widest mb-2">Scroll to explore</span>
+                <div class="h-16 w-[1px] bg-black opacity-20"></div>
+            </div>
+        </footer>
+
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?q=80&w=2070" 
+                 alt="Cover Art" 
+                 class="w-full h-full object-cover opacity-10 grayscale">
+        </div>
+    </section>
+
+    <section class="p-8 md:p-24 bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+            <div class="space-y-6">
+                <h2 class="vogue-title text-5xl italic">The Grain</h2>
+                <p class="text-sm leading-loose text-gray-500 font-light">
+                    在這裡，每一顆噪點都是故事。不追求數位的高清，只追求膠卷的靈魂。這是我與世界的對話，也是 NINETEEN 的視覺基石。
+                </p>
+                <a href="#" class="inline-block text-xs uppercase border-b border-black pb-1 letter-spacing-widest font-bold">View Gallery</a>
+            </div>
+            <div class="aspect-[3/4] bg-gray-100 overflow-hidden">
+                <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs uppercase tracking-widest italic">
+                    Place your Dazz Cam photo here
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
