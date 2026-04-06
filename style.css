@@ -1,73 +1,54 @@
-/* NINETEEN | Core Identity System
-   Aesthetic Engineer: Xiangyun 
-*/
+/* NINETEEN | High-Definition Visual System */
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap');
 
 :root {
-    --primary-black: #1a1a1a;
+    --primary-black: #121212; /* 更深的黑，增加對比度 */
     --vogue-white: #ffffff;
-    --line-opacity: 0.4; /* 提升線條能見度 */
+    --accent-gray: #757575;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--vogue-white);
     color: var(--primary-black);
-    margin: 0;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* 強制抗鋸齒 */
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* 標題優化：強化橫向筆畫的穩定性 */
+/* 標題重構：使用 Playfair Display 並強化橫向視覺 */
 .vogue-title {
-    font-family: 'Bodoni Moda', serif;
-    font-optical-sizing: auto; /* 自動優化不同尺寸下的線條細節 */
-    font-weight: 500; /* 稍微增加權重以應對數位顯示 */
-    letter-spacing: -0.01em;
-    line-height: 0.9;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800; /* 使用極粗體確保線條渾厚 */
+    letter-spacing: -0.02em;
+    line-height: 1;
+    /* 數位補強：輕微的陰影能讓細線在白底上更立體 */
+    text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.05);
 }
 
 .letter-spacing-widest {
-    letter-spacing: 0.35em;
+    letter-spacing: 0.4em; /* 增加間距，提升高級感 */
 }
 
-/* 裝飾性橫線：增加厚度與對比度 */
+/* 強化橫向裝飾線：增加到 2px 寬度，確保清晰 */
 .separator-line {
-    height: 1px;
+    height: 2px; 
     background-color: var(--primary-black);
-    opacity: var(--line-opacity);
-    width: 100%;
-    margin: 2rem 0;
+    width: 60px;
+    margin: 1.5rem 0;
+    display: block;
 }
 
-/* 垂直指示線 */
+/* 垂直線也同步加粗 */
 .vertical-scroll-line {
-    height: 80px;
-    width: 1.5px; /* 從 1px 增加到 1.5px */
+    height: 100px;
+    width: 2px;
     background-color: var(--primary-black);
-    opacity: 0.6; /* 增加透明度權重 */
 }
 
-/* 動畫效果 */
-.fade-in {
-    animation: fadeIn 1.8s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 導覽連結效果 */
 .nav-link {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600; /* 加粗導覽字體 */
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-weight: 300;
-    position: relative;
-    transition: opacity 0.3s ease;
-}
-
-.nav-link:hover {
-    opacity: 0.5;
 }
